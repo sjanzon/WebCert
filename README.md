@@ -4,6 +4,8 @@
 ![PHP ≥ 8.1](https://img.shields.io/badge/PHP-%E2%89%A5%208.1-777bb4.svg)
 ![Docker](https://img.shields.io/badge/Docker-bereit-2496ed.svg)
 
+**Deutsch** · [English](README.en.md)
+
 **Eigene Root-CA für das Heimnetz – mit Weboberfläche.**
 
 WebCert erstellt eine private Zertifizierungsstelle (CA) und stellt damit TLS-Zertifikate für Webseiten und Geräte im Heimnetz aus: NAS, Router, Home Assistant, Proxmox, Pi-hole, interne Webseiten … Einmal das CA-Zertifikat auf allen Geräten installieren – danach gibt es keine Browser-Warnungen mehr.
