@@ -589,7 +589,8 @@ final class CertificateAuthority
     /** Schreibt eine temporäre OpenSSL-Konfiguration (nötig für Extensions/SAN und unter Windows ohne openssl.cnf). */
     private function config(array $ext = [], array $sans = []): array
     {
-        $lines = ['[ req ]', 'distinguished_name = req_dn', '', '[ req_dn ]', '', '[ ext ]'];
+        // default_bits: PHP prüft die Mindestlänge auch bei EC-Schlüsseln, ohne Wert schlägt openssl_pkey_new() fehl
+        $lines = ['[ req ]', 'distinguished_name = req_dn', 'default_bits = 2048', '', '[ req_dn ]', '', '[ ext ]'];
         foreach ($ext as $name => $value) {
             $lines[] = "$name = $value";
         }
