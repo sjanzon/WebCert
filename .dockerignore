@@ -1,0 +1,7 @@
+# Niemals CA-Schlüssel oder Zertifikate ins Image kopieren
+data/
+.git/
+.idea/
+*.md
+Dockerfile
+compose.yaml
