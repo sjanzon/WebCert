@@ -1,0 +1,5 @@
+# Enthält CA-Schlüssel, Zertifikate und Passwort-Hash – niemals einchecken
+/data/
+
+# PhpStorm
+/.idea/

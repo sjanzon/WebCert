@@ -1,0 +1,17 @@
+services:
+  webcert:
+    build: .
+    image: webcert
+    container_name: webcert
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      TZ: Europe/Berlin
+      # WEBCERT_LANG: en
+    volumes:
+      - webcert-data:/data
+
+volumes:
+  webcert-data:
+    name: webcert-data
